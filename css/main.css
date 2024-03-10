@@ -1,0 +1,31 @@
+#container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+#foodList {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 0;
+}
+
+li {
+  border: solid 2px #e7e7e7;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  align-self: center;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  width: 250px;
+}
+
+/*# sourceMappingURL=main.css.map */
