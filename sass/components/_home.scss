@@ -1,6 +1,8 @@
 #container {
     margin: 0 auto;
-    max-width: 1200px
+    max-width: 1200px;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #foodList {
@@ -9,6 +11,7 @@
     justify-content: space-around;
     align-items: flex-end;
     padding: 0;
+    flex-wrap: wrap;
 }
 
 li {
@@ -21,9 +24,21 @@ li {
 h2 {
     align-self: center;
     font-size: 24px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 img {
     width: 250px;
+}
+
+#sidebar {
+    width: 400px;
+    background-color: #e7e7e7;
+}
+
+#sidebar ul {
+    padding: 15px;
+}
+
+#sidebar li {
+    padding: 5px;
 }

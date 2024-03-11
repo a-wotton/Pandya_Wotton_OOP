@@ -60,13 +60,10 @@ foodList.push(potato);
 
 // console.log(foodList);
 
-
-
-
 const list = document.querySelector("#foodList");
 
 foodList.forEach(food => {
-    console.log(food);
+    
   //Creates our content
   let img = document.createElement("img");
   let li = document.createElement("li");
@@ -78,6 +75,10 @@ foodList.forEach(food => {
 
   //Places our content
    li.appendChild(img);
-   li.appendChild(h2)
+   li.appendChild(h2);
    list.appendChild(li);
+
+//    food.showInfo();
+
+   li.addEventListener("click", food.showInfo)
 })
