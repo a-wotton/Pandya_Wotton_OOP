@@ -22,12 +22,15 @@ class SingleFood {
         this.sugars = sugars;
         this.fats = {
             saturated: saturatedFat,
-            trans: transFat
+            trans: transFat,
         } 
-        this.image = image;
+        this.image = image
 
-    // Methods:
     }
+        // Methods:
+        showInfo() {
+        console.log(this);
+        }
 }
 
 // class MultiFood extends SingleFood {
