@@ -2,17 +2,52 @@
     margin: 0 auto;
     max-width: 1200px;
     display: flex;
-    font-family: Arial, Helvetica, sans-serif;
 }
+
+#container h1 {
+    font-family: 'Raleway', sans-serif; 
+    font-size: 2em; 
+    font-weight: bold;
+    letter-spacing: 2px; 
+    margin-bottom: 20px; 
+}
+
+#container p {
+    font-family: 'Raleway', sans-serif; 
+    font-size: 1.2em; 
+    line-height: 1.5; 
+    letter-spacing: 1px; 
+    margin-bottom: 15px; 
+}
+
+
+/* foodlist stylizng */
 
 #foodList {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
-    align-items: flex-end;
-    padding: 0;
+    align-items: center; 
+    padding: 20px; 
     flex-wrap: wrap;
+    background-color: #f4f4f4; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 20px rgba(255, 255, 255, 0.5); 
 }
+
+#foodList li {
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+#foodList li:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 255, 255, 0.5); 
+}
+
+
+
 
 li {
     border: solid 2px #e7e7e7;
@@ -43,3 +78,17 @@ img {
     padding: 5px;
 }
 
+#foodList li {
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: box-shadow 0.3s ease; 
+    cursor: pointer;
+}
+
+#foodList li:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+}
+
+
+  
+  
