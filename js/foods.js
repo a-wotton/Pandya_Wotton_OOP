@@ -50,7 +50,7 @@ class SingleFood {
         detailsList.appendChild(fatsList);
 
         const imageElement = document.createElement("img");
-        imageElement.src = `images/${this.image}`;
+        imageElement.src = `images/final-images/${this.image}`;
 
         infoContainer.appendChild(heading);
         infoContainer.appendChild(detailsList);

@@ -96,7 +96,7 @@ const banana = new SingleFood(
     14, //sugars
     0, //saturated fat
     0, //trans fat
-    "banana.avif"
+    "banana.jpg"
 );
 foodList.push(banana);
 
@@ -122,7 +122,7 @@ foodList.forEach(food => {
     let li = document.createElement("li");
     let h2 = document.createElement("h2");
 
-    img.src = `images/${food.image}`;
+    img.src = `images/final-images/${food.image}`;
     h2.textContent = food.name;
 
 
