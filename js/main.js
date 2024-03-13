@@ -1,8 +1,8 @@
 import { SingleFood } from "./foods.js";
 
-const foodList = []
+const foodList = [];
 
-const apple = new SingleFood (
+const apple = new SingleFood(
     "Apple", //name
     "Fruit", //food type
     180, //grams
@@ -13,10 +13,10 @@ const apple = new SingleFood (
     0, //saturated fat
     0, //trans fat
     "apple.jpg"
-)
+);
 foodList.push(apple);
 
-const egg = new SingleFood (
+const egg = new SingleFood(
     "Egg", //name
     "Protein", //food type
     50, //grams
@@ -27,10 +27,10 @@ const egg = new SingleFood (
     1.5, //saturated fat
     0, //trans fat
     "egg.jpg"
-)
+);
 foodList.push(egg);
 
-const steak = new SingleFood (
+const steak = new SingleFood(
     "Ribeye Steak", //name
     "Meat", //food type
     225, //grams
@@ -41,10 +41,10 @@ const steak = new SingleFood (
     23, //saturated fat
     4, //trans fat
     "steak.jpg"
-)
+);
 foodList.push(steak);
 
-const potato = new SingleFood (
+const potato = new SingleFood(
     "Russet Potato", //name
     "Vegetable", //food type
     170, //grams
@@ -55,30 +55,82 @@ const potato = new SingleFood (
     0, //saturated fat
     0, //trans fat
     "potato.jpg"
-)
+);
 foodList.push(potato);
 
-// console.log(foodList);
+const avacado = new SingleFood(
+    "Avacado", //name
+    "Fruit", //food type
+    200, //grams
+    320, //calories
+    4, //proteins
+    17, //carbohydrates
+    1, //sugars
+    4.5, //saturated fat
+    0, //trans fat
+    "avacado.jpg"
+);
+foodList.push(avacado);
+
+const carrot = new SingleFood(
+    "Carrot", //name
+    "Vegetable", //food type
+    61, //grams
+    25, //calories
+    0.6, //proteins
+    6, //carbohydrates
+    3, //sugars
+    0, //saturated fat
+    0, //trans fat
+    "carrot.jpg"
+);
+foodList.push(carrot);
+
+const banana = new SingleFood(
+    "Banana", //name
+    "Fruit", //food type
+    120, //grams
+    105, //calories
+    1.3, //proteins
+    27, //carbohydrates
+    14, //sugars
+    0, //saturated fat
+    0, //trans fat
+    "banana.avif"
+);
+foodList.push(banana);
+
+const walnuts = new SingleFood(
+    "Walnuts", //name
+    "Nut", //food type
+    4, //grams
+    185, //calories
+    4.3, //proteins
+    3.9, //carbohydrates
+    0, //sugars
+    1.7, //saturated fat
+    0, //trans fat
+    "walnuts.jpg"
+);
+foodList.push(walnuts);
 
 const list = document.querySelector("#foodList");
 
 foodList.forEach(food => {
     
-  //Creates our content
-  let img = document.createElement("img");
-  let li = document.createElement("li");
-  let h2 = document.createElement("h2");
+    let img = document.createElement("img");
+    let li = document.createElement("li");
+    let h2 = document.createElement("h2");
 
-  //Edits our content
-  img.src = `images/${food.image}`;
-  h2.textContent = food.name;
+    img.src = `images/${food.image}`;
+    h2.textContent = food.name;
 
-  //Places our content
-   li.appendChild(img);
-   li.appendChild(h2);
-   list.appendChild(li);
 
-//    food.showInfo();
+    li.appendChild(img);
+    li.appendChild(h2);
+    list.appendChild(li);
 
-   li.addEventListener("click", food.showInfo)
-})
+    li.addEventListener("click", () => {
+        food.showInfo();
+    });
+});

@@ -11,7 +11,6 @@ class SingleFood {
         saturatedFat,
         transFat,
         image
-    // Properties:
     ) {
         this.name = name;
         this.category = category;
@@ -23,14 +22,40 @@ class SingleFood {
         this.fats = {
             saturated: saturatedFat,
             trans: transFat,
-        } 
-        this.image = image
-
+        };
+        this.image = image;
     }
-        // Methods:
-        showInfo() {
-        console.log(this);
-        }
+
+    // Methods:
+    showInfo() {
+        const infoContainer = document.querySelector("#foodInfo");
+
+        infoContainer.innerHTML = "";
+
+        const heading = document.createElement("h2");
+        heading.textContent = this.name;
+
+        const detailsList = document.createElement("ul");
+
+        const properties = ["category", "grams", "calories", "proteins", "carbohydrates", "sugars"];
+
+        properties.forEach(prop => {
+            const listItem = document.createElement("li");
+            listItem.textContent = `${prop}: ${this[prop]}`;
+            detailsList.appendChild(listItem);
+        });
+
+        const fatsList = document.createElement("li");
+        fatsList.textContent = `Fats: Saturated - ${this.fats.saturated}, Trans - ${this.fats.trans}`;
+        detailsList.appendChild(fatsList);
+
+        const imageElement = document.createElement("img");
+        imageElement.src = `images/${this.image}`;
+
+        infoContainer.appendChild(heading);
+        infoContainer.appendChild(detailsList);
+        infoContainer.appendChild(imageElement);
+    }
 }
 
 // class MultiFood extends SingleFood {
